@@ -16,3 +16,5 @@
 }
 .brand{color:#E56D39;}
 .navbar-toggle{ background-color: #E56D39;}
+.col-centered{ float: none;
+    margin: 0 auto;}
