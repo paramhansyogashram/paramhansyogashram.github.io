@@ -44,9 +44,22 @@
 
       <div class="row">
       <div class="col-lg-6 col-centered">
-      	 <br/><h1></h1>
+      	 <br/><h1>Bhajan List</h1>
 
-      <h2  class="brand">MANAVA SEVA ISHWAR SEVA HAI</h2>
+<ul class="pager">
+  <li><a href="javascript:void(0);" id="prePlay">Previous</a></li>
+  <li>
+  <audio id="audio" preload="auto" tabindex="0" controls="" type="audio/mpeg">
+                                <source id ="audioSource" type="audio/mp3" src="http://docs.google.com/uc?export=open&id=0B6G-N1d0zDJeTW9ZYXdlMTNmR28">
+                                Sorry, your browser does not support HTML5 audio.
+                            </audio>
+                            
+                            </li>
+  <li><a href="javascript:void(0);" id="nextPlay">Next</a></li>
+  
+</ul>
+<ul class="pager"><li><div id="cur_play_title" class="brand">1-guru vandana.mp3</div></li></ul>
+      <ul id="bhajan_list"></ul>
       </div>
 
       <div class="row">
@@ -59,4 +72,50 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+    var url = "http://docs.google.com/uc?export=open&id=";
+    var cur_play_id = "0B6G-N1d0zDJeTW9ZYXdlMTNmR28";
+    var mp3_data = {"kind":"drive#fileList","incompleteSearch":false,"files":[{"kind":"drive#file","id":"0B6G-N1d0zDJeTW9ZYXdlMTNmR28","name":"1-guru vandana.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeZTB0bmhUNVFEcU0","name":"4-360 RANIYA.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeSWk1MEktWDZ3OXc","name":"22-sultsna balakh bukhare da.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeSjltRGN1UjhoOEE","name":"21-sher tatha bhen ka vastivik saroop.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJecDlUOS1sM1J1WkE","name":"20-SATI MADALASHA.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeVDA5Y19WQ2NsVVU","name":"31-pujay maharaj ji dwara kirtan man ka jeet lo mere bhai.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeZm5EYkZYV3NVa0U","name":"18-kutiya ka dan.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJecWRkTVBCWnkyQW8","name":"16-ak chor sant ko ganaj pilana.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeUHdjckttM242RjQ","name":"15-ahir  bhagwan shanker ko ukthi marana and kisan ko bhagavan dwwara varadan.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeN3hsOUdCcDgtTzQ","name":"14-aatmarupj ahila prasang.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeQXc3My02RHJmTzg","name":"13-lBRAMHCHARI BANDAR.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJecTFEUkg5TnhEc0k","name":"12-KA ARTH AVM CHANE KA PRASAD.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJedUh1WWtWbFRNU3c","name":"11-BAJARE KE KHET KA PATTHAR.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJec293b2RHb0RoYlE","name":"9-SETH JI SEETARAM.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJedmJEOGZULVdOY2s","name":"10-AJAMIL UDHDHAR.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJea2JheHlTQk9mU28","name":"8-THAMBA SINGH.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeWUUybzNTSkFlc2s","name":"7-MATHE SEETARAM BIRAJE.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeOHNRTHNFQ0VhV0E","name":"6-AHIR CHARWAHA -AATMA  AATAM 1 HAI.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeeWR4Q0U4WldZZzg","name":"5-KABUL KE GHAUNE.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeanozQXBFZTNTQms","name":"3-DHRUV UTTAM.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeZFFqS0pPUHFmZ2M","name":"2-PURAB KI KAMAI.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeX3NzZlZUSXFvaDg","name":"30- guru vanadana vakhya.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeYWM3clhVTy1rUDQ","name":"29-bhangi ka prasang.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeQ2hVYXBmLUt1Q2M","name":"28-siyarin.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJedmRZRmRHal9yRFU","name":"27-sadhuo ke jamat ko seetaram.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeSDgxX1Y5S3lfOGc","name":"26-narad jee potana leka bhagana.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeelQ3RlVMcjdNelk","name":"25-maa ka kaleja.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJedHIweUdaUW9sVDQ","name":"24-gadaha ki kahani.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeWWo5VUQtSWxaczA","name":"23-choro ka gaw.mp3","mimeType":"audio/mpeg"},{"kind":"drive#file","id":"0B6G-N1d0zDJeMGNJRGFvSFBDdHM","name":"17-anapana char pandit.mp3","mimeType":"audio/mpeg"}]};
+jQuery( document ).ready(function() {
+  mp3_data.files.map(function(file){
+  jQuery("#bhajan_list").append("<li file_title=\""+file.name+"\" id=\""+file.id+"\"><a href=\"javascript:void(0);\" class=\"playmp3\">"+file.name+" - <span class=\"play_now\">Play Now</span></a></li>");
+});
+  jQuery("#"+cur_play_id).addClass("selected");
+  jQuery("#"+cur_play_id+" .play_now").text("Now playing");
+  jQuery(".playmp3").click(function(e){
+    e.preventDefault();
+    var elm = e.target;
+    playMp3(elm.getAttribute('data'))  
+  })
+  jQuery("#nextPlay").click(function(e){
+    var next_play_id = jQuery("#"+cur_play_id).next().attr("id");
+    if(next_play_id == undefined){
+      next_play_id = jQuery("#bhajan_list li").first().attr("id");
+    }
+    playMp3(next_play_id)  
+  });
+  jQuery("#prePlay").click(function(e){
+    var pre_play_id = jQuery("#"+cur_play_id).prev().attr("id");
+    if(pre_play_id == undefined){
+      pre_play_id = jQuery("#bhajan_list li").last().attr("id");
+    }
+    playMp3(pre_play_id)  
+  })
+});
+function playMp3(file_id) {
+  var audio = document.getElementById('audio');
+  var source = document.getElementById('audioSource');
+  source.src = url+file_id;
+  audio.load(); //call this to just preload the audio without playing
+  audio.play(); //call this to play the song right away;
+  cur_play_id = file_id;
+  jQuery("#bhajan_list li").removeClass("selected");
+  jQuery(".play_now").text("Play Now");
+  jQuery("#"+cur_play_id).addClass("selected");
+  jQuery("#"+cur_play_id+" .play_now").text("Now playing");
+  jQuery("#cur_play_title").text(jQuery("#"+cur_play_id).attr("file_title"));
+
+}
+    </script>
+    
 </html>
