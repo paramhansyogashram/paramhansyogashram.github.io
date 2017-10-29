@@ -18,3 +18,5 @@
 .navbar-toggle{ background-color: #E56D39;}
 .col-centered{ float: none;
     margin: 0 auto;}
+.carousel_height{height: 400px;background: #E56D39;}
+.img-responsive {margin: auto;}
