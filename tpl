@@ -44,56 +44,9 @@
 
       <div class="row">
       <div class="col-lg-6 col-centered">
-      	 <br/><h1>WELCOME ALL..<br/>
-आप सभी का हार्दिक स्वागत है</h1>
+      	 <br/><h1></h1>
 
       <h2  class="brand">MANAVA SEVA ISHWAR SEVA HAI</h2>
-      </div>
-      <div class="row">
-      	<div class="col-lg-6 col-centered">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="4"></li>
-      <li data-target="#myCarousel" data-slide-to="5"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner carousel_height">
-   <div class="item active">
-   <img class="img-responsive  " src="http://s3.ap-south-1.amazonaws.com/paramhansyogashram.com/paramhansmaharaj-ji.jpg" alt="paramhansmaharaj" 
-      title="paramhansmaharaj">
-     
-    </div>
-    <div class="item ">
-      <img  class="img-responsive  img-thumbnail" src="http://s3.ap-south-1.amazonaws.com/paramhansyogashram.com/8.jpg">
-    </div>
-
-    <div class="item">
-     <img  class="img-responsive img-thumbnail " src="http://s3.ap-south-1.amazonaws.com/paramhansyogashram.com/9.jpg">
-    </div>
-
-    <div class="item">
-     <img  class="img-responsive img-thumbnail " src="http://s3.ap-south-1.amazonaws.com/paramhansyogashram.com/11.jpg">
-    </div>
-     <div class="item">
-     <img  class="img-responsive  img-thumbnail" src="http://s3.ap-south-1.amazonaws.com/paramhansyogashram.com/12.jpg">
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div> </div>
       </div>
 
       <div class="row">
