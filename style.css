@@ -33,3 +33,4 @@
     width:100%;
     position:absolute;
 }
+#cur_play_title, .playmp3{    text-transform: capitalize;}
