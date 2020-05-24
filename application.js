@@ -1,5 +1,5 @@
 jQuery( document ).ready(function() {
-	jQuery('#footer').load('footer.html',{},function(){
+	jQuery('#footer').load('footer.html',function(){
 		var d = new Date();
 		jQuery('#copyright').html("C"+d.getFullYear());
 	});
