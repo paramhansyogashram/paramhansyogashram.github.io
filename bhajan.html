@@ -110,18 +110,23 @@ jQuery( document ).ready(function() {
 });
 });
 function playMp3(file_id) {
-  var audio = document.getElementById('audio');
-  var source = document.getElementById('audioSource');
-  source.src = url+file_id;
-  audio.load(); //call this to just preload the audio without playing
-  audio.play(); //call this to play the song right away;
-  cur_play_id = file_id;
-  jQuery("#bhajan_list li").removeClass("selected");
-  jQuery(".play_now").text("Play Now");
-  jQuery("#"+cur_play_id).addClass("selected");
-  jQuery("#"+cur_play_id+" .play_now").text("Now playing");
-  jQuery("#cur_play_title").text(jQuery("#"+cur_play_id).attr("file_title"));
-  document.title = 'Bhajan playing : '+jQuery("#"+cur_play_id).attr("file_title");
+  try{
+    var audio = document.getElementById('audio');
+    audio.stop();
+    var source = document.getElementById('audioSource');
+    source.src = url+file_id;
+    audio.load(); //call this to just preload the audio without playing
+    audio.play(); //call this to play the song right away;
+    cur_play_id = file_id;
+    jQuery("#bhajan_list li").removeClass("selected");
+    jQuery(".play_now").text("Play Now");
+    jQuery("#"+cur_play_id).addClass("selected");
+    jQuery("#"+cur_play_id+" .play_now").text("Now playing");
+    jQuery("#cur_play_title").text(jQuery("#"+cur_play_id).attr("file_title"));
+    document.title = 'Bhajan playing : '+jQuery("#"+cur_play_id).attr("file_title");
+  }catch(e){
+    console.log(e);
+  }
 
 }
     </script>
