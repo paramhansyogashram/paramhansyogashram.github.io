@@ -84,7 +84,12 @@ jQuery( document ).ready(function() {
   jQuery("#"+cur_play_id+" .play_now").text("Now playing");
   jQuery(".playmp3").click(function(e){
     e.preventDefault();
-    playMp3(jQuery(e.target.parentElement).attr("id"))  
+    if(e.target.tagName == "SPAN"){
+    	playMp3(jQuery(e.target.parentElement.parentElement).attr("id"));
+    }else{
+    	playMp3(jQuery(e.target.parentElement).attr("id"));
+    }
+      
   })
   jQuery("#nextPlay").click(function(e){
     var next_play_id = jQuery("#"+cur_play_id).next().attr("id");
