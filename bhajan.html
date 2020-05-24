@@ -112,7 +112,6 @@ jQuery( document ).ready(function() {
 function playMp3(file_id) {
   try{
     var audio = document.getElementById('audio');
-    audio.stop();
     var source = document.getElementById('audioSource');
     source.src = url+file_id;
     audio.load(); //call this to just preload the audio without playing
